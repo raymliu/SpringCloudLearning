@@ -9,3 +9,10 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+
