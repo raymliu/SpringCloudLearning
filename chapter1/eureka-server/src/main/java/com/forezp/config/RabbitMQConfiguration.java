@@ -12,7 +12,12 @@ public class RabbitMQConfiguration {
 
     @Bean
     public Queue Queue1() {
-        return new Queue("rayTest");
+        return new Queue("rayTest1");
+    }
+
+    @Bean
+    public Queue Queue2() {
+        return new Queue("rayTest2");
     }
 
 }

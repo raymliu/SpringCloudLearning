@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
  * Created by Ray Ma on 2019/9/19.
  */
 @Component
-@RabbitListener(queues = "rayTest1")
-public class RabbitMqConsumer {
+@RabbitListener(queues = "rayTest2")
+public class RabbitMqConsumer2 {
 
 
 
     @RabbitHandler
-    public void resceiveMessage(String message){
-        System.out.println("Test1 receiver1:"+message);
+    public void resceiveMessage2(String message){
+        System.out.println("Test2 receiver2:"+message);
 
     }
 }

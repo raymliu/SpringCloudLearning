@@ -17,10 +17,13 @@ public class MqTestController {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
-    @PostMapping("/test.mq")
+    @PostMapping("/test/mq")
     public String sendTest(@RequestParam("content")String content){
          content=content+new Date();
-        amqpTemplate.convertAndSend("lyhTest1",content);
+        for (int i = 0;i < 10;i++) {
+            amqpTemplate.convertAndSend("rayTest1",content);
+            amqpTemplate.convertAndSend("rayTest2",content);
+        }
         return content;
 
     }
